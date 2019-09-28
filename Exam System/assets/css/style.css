@@ -1,0 +1,16 @@
+.padding-right{
+    padding: 4%;
+}
+
+.fa-trash{
+    color: red;
+    cursor: pointer;
+}
+
+.fa-pencil-alt{
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+}

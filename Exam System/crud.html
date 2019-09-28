@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Questions Crud</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <script src="assets/js/teachers/models/questions.js"></script>
+    <script src="assets/js/teachers/models/questionsoperations.js"></script>
+    <script src="assets/js/teachers/controllers/controller.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="alert-success text-center">Questions CRUD</h1>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input class="form-control" type="number" min="1" value="1" disabled id="id" />
+            <label for="name">Name</label>
+            <textarea class="form-control" cols="30" rows="5" placeholder="Type Question" id="name"></textarea>
+            <label for="option1">Option One</label>
+            <input class="form-control" type="text" placeholder="Type Option 1" id="option1" />
+            <label for="option2">Option Two</label>
+            <input class="form-control" type="text" placeholder="Type Option 2" id="option2" />
+            <label for="option3">Option Three</label>
+            <input class="form-control" type="text" placeholder="Type Option 3" id="option3" />
+            <label for="option4">Option Four</label>
+            <input class="form-control" type="text" placeholder="Type Option 4" id="option4" />
+            <label for="rans">Right Answer</label>
+            <input class="form-control" type="text" placeholder="Type Right Answer" id="rans" />
+            <label for="score">Score</label>
+            <input class="form-control" type="range" min="1" max="10" value="1" id="score" />
+        </div>
+        <h6>Total Records <span id="total"></span> Marked Records <span id="marked"></span> Unmarked Records <span id="unmarked"></span></h6>
+        <div class="form-group">
+            <button id="add" class="btn btn-primary">Add</button>
+            <button id="delete" class="btn btn-danger" >Delete</button>
+            <button class="btn btn-primary">Search</button>
+            <button class="btn btn-primary">Update</button>
+            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-primary">Load</button>
+            <button class="btn btn-primary">Clear All</button>
+            <button class="btn btn-primary">Sort</button>
+            <button class="btn btn-primary">Save To Server</button>
+            <button class="btn btn-primary">Fetch From Server</button>
+            <button id="bulkactions" class="btn btn-primary">Bulk Actions</button>
+        </div>
+        <div>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Option 1</th>
+                        <th>Option 2</th>
+                        <th>Option 3</th>
+                        <th>Option 4</th>
+                        <th>Right Answer</th>
+                        <th>Score</th>
+                        <th>Operations</th>
+                        <th>
+                            <input type="checkbox" name="select" id="selectAll">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="printedQuestions"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
